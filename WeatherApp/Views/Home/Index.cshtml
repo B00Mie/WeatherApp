@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    
+}
+@model WeatherApp.Models.Weather
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1>Weather App</h1>
+        <div class="form">
+            @using (Html.BeginForm())
+            {
+                @Html.TextBoxFor(m => m.name, htmlAttributes: new { @placeholder = "Type in a city name" })
+                <br />
+                <input type="submit" value="Search" />
+            }
+        </div>
+
+
+        <p>@ViewBag.Res</p>
+
+
+    </div>
+    <div class="col-md-4 col-sm-3 col-xs-1">
+
+    </div>
+    <div class="col-md-8 col-sm-8 col-xs-11">
+        @if (ViewBag.id != null)
+        {
+            <div id="openweathermap-widget-15"></div>
+            <script>
+window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+        window.myWidgetParam.push({ id: 15, cityid: @ViewBag.id, appid: '7439a1642de23365c6cc4770e9a50464', units: 'metric', containerid: 'openweathermap-widget-15', }); (function () {
+            var script = document.createElement('script'); script.async = true; script.charset = "utf-8";
+    script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+        })();</script>
+        }
+    </div>
+
+</div>
+
+

@@ -1,0 +1,65 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*Custom styles*/
+h1{
+    font-size:64px !important;
+}
+.form{
+    margin:5% 0 5% 0;
+}
+.form input[type=text]{
+    width:150%;
+    padding: 10px 0 10px 15px;
+    border-radius:3px;
+    border:solid 1px #0094ff;
+}
+.form input[type=submit] {
+    margin-top:2%;
+    background-color:cornflowerblue;
+    border:none;
+    padding:5px 10px 5px 10px;
+    border-radius:5px;
+    color: white;
+}
+
+#openweathermap-widget-15{
+    text-align:center;
+    display:inline;
+    margin: 0 auto;
+}
+
+/*Media Rules*/
+@media only screen and (max-width:376px){
+    h1{
+        font-size:46px !important;
+    }
+}
+@media only screen and (min-width:1440px) {
+    .widget-right {
+        margin:4%;
+    }
+}
+
